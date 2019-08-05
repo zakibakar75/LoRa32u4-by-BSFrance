@@ -42,7 +42,7 @@ static const PROGMEM u1_t NWKSKEY[16] = { 0x8E, 0xD9, 0xBE, 0xB0, 0xF6, 0x78, 0x
 
 static const u1_t PROGMEM APPSKEY[16] = { 0xB0, 0xE1, 0x1C, 0x22, 0x3F, 0xAC, 0x5F, 0xC4, 0xC6, 0x92, 0x02, 0x93, 0x47, 0x71, 0x76, 0x10 };
 
-static const u4_t DEVADDR = 0x26011C84 ; // <-- Change this address for every node!
+static const u4_t DEVADDR = 0xZZZZZZ ; // <-- Change this address for every node!
    
 void os_getArtEui (u1_t* buf) { }
 void os_getDevEui (u1_t* buf) { }
@@ -53,7 +53,7 @@ void os_getDevKey (u1_t* buf) { }
 static osjob_t sendjob;
 
 /* Schedule TX every this many seconds */
-const unsigned TX_INTERVAL = 5;  //every 20mins
+const unsigned TX_INTERVAL = 5;  //every 5sec
 
 /* Pin mapping */
 const lmic_pinmap lmic_pins = {
@@ -138,7 +138,7 @@ void onEvent (ev_t ev) {
                USBCON &= ~_BV(USBE); 
                // Add your wake up source here, example attachInterrupt()
 
-               for(int i=0; i<75; i++)
+               for(int i=0; i<75; i++)  //sleep for around 10 minutes
                {
                     LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);
                }
