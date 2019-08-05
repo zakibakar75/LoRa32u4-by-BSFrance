@@ -1,4 +1,4 @@
-# BSFrance-LoRa32u4-
+# BSFrance-LoRa32u4
 Source code for BSFrance LoRa32u4
 
 The board is good. You can buy it at AliExpress.  Quite cheap also.  I found that the performance of the LoRa chip is quite good.  
