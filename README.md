@@ -1,8 +1,8 @@
-# BSFrance-LoRa32u4
-Source code for BSFrance LoRa32u4
+# BSFrance-LoRa32u4 II
+Source code for BSFrance LoRa32u4 II
 
 The board is good. You can buy it at AliExpress.  Quite cheap also.  I found that the performance of the LoRa chip is quite good.  
-For the LMIC library, i use my LMIC_AS923 one.  You can find it in my github also.
+For the LMIC library, i use my LMIC_AS923 library.  You can find it in my github also.
 
 Note that my board is version 1.3. So, the pin configuration for the LoRa chip is like this :
 
